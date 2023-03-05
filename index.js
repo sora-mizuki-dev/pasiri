@@ -35,10 +35,10 @@ async function request(text) {
 async function main() {
   console.log(`Pasiri: Hello! May I help you?\n`)
   for await (const chunk of Deno.stdin.readable) {
-    const text = decoder.decode(chunk);
+    const text = decoder.decode(chunk)
 
     try {
-      const answer = await request(text);
+      const answer = await request(text)
       console.log(`\nPasiri: ${answer}\n`)
     } catch (e) {
       console.error(e)
